@@ -66,4 +66,23 @@ class MainActivity : AppCompatActivity() {
         return true
 
     }
+
+    // Этот метод реализует нажатие на home кнопку бара (Подгружает активити)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+
+            android.R.id.home -> {
+
+                val mainMenu = MainMenu()
+                // Берет файл main_menu.xml из layout
+                mainMenu.show(supportFragmentManager, "main_menu")
+
+            }
+
+        }
+
+        return true
+
+    }
 }
